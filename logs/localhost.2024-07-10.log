@@ -1,0 +1,1082 @@
+10-Jul-2024 08:41:00.975 심각 [ajp-nio-0.0.0.0-8009-exec-17] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/travel/resv_all.jsp]의 [28] 행에서 오류가 발생했습니다.
+hotel_id cannot be resolved to a variable
+25:         String sqlQuery = "SELECT i.reservation_id, i.hotel_id, i.night_count, i.check_in_date, i.check_out_date, i.hotel_price, i.guest_count, i.inquirer_name, i.travel_reservation_status, i.hotel_reservation_status, i.inquirer_tel, i.room_count, h.hotel_name, ti.agency_name, i.agency_id FROM inquiry_info_list i JOIN travel_info_list ti ON i.agency_id = ti.agency_id JOIN hotel_info_list h ON i.hotel_id = h.hotel_id WHERE !(i.travel_reservation_status = 3 OR i.hotel_reservation_status = 3) AND i.agency_id = ? AND i.hotel_id = ?";
+26:         PreparedStatement ps = conn.prepareStatement(sqlQuery);
+27:         ps.setInt(1, agency_id);
+28:         ps.setInt(2, Integer.parseInt(request.getParameter(hotel_id)));
+29:         ResultSet rs = ps.executeQuery();
+30: 
+31:         while (rs.next()) {
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/travel/resv_all.jsp]의 [28] 행에서 오류가 발생했습니다.
+hotel_id cannot be resolved to a variable
+25:         String sqlQuery = "SELECT i.reservation_id, i.hotel_id, i.night_count, i.check_in_date, i.check_out_date, i.hotel_price, i.guest_count, i.inquirer_name, i.travel_reservation_status, i.hotel_reservation_status, i.inquirer_tel, i.room_count, h.hotel_name, ti.agency_name, i.agency_id FROM inquiry_info_list i JOIN travel_info_list ti ON i.agency_id = ti.agency_id JOIN hotel_info_list h ON i.hotel_id = h.hotel_id WHERE !(i.travel_reservation_status = 3 OR i.hotel_reservation_status = 3) AND i.agency_id = ? AND i.hotel_id = ?";
+26:         PreparedStatement ps = conn.prepareStatement(sqlQuery);
+27:         ps.setInt(1, agency_id);
+28:         ps.setInt(2, Integer.parseInt(request.getParameter(hotel_id)));
+29:         ResultSet rs = ps.executeQuery();
+30: 
+31:         while (rs.next()) {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 08:41:09.894 심각 [ajp-nio-0.0.0.0-8009-exec-20] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/travel/resv_all.jsp]의 [28] 행에서 오류가 발생했습니다.
+hotel_id cannot be resolved to a variable
+25:         String sqlQuery = "SELECT i.reservation_id, i.hotel_id, i.night_count, i.check_in_date, i.check_out_date, i.hotel_price, i.guest_count, i.inquirer_name, i.travel_reservation_status, i.hotel_reservation_status, i.inquirer_tel, i.room_count, h.hotel_name, ti.agency_name, i.agency_id FROM inquiry_info_list i JOIN travel_info_list ti ON i.agency_id = ti.agency_id JOIN hotel_info_list h ON i.hotel_id = h.hotel_id WHERE !(i.travel_reservation_status = 3 OR i.hotel_reservation_status = 3) AND i.agency_id = ? AND i.hotel_id = ?";
+26:         PreparedStatement ps = conn.prepareStatement(sqlQuery);
+27:         ps.setInt(1, agency_id);
+28:         ps.setInt(2, Integer.parseInt(request.getParameter(hotel_id)));
+29:         ResultSet rs = ps.executeQuery();
+30: 
+31:         while (rs.next()) {
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/travel/resv_all.jsp]의 [28] 행에서 오류가 발생했습니다.
+hotel_id cannot be resolved to a variable
+25:         String sqlQuery = "SELECT i.reservation_id, i.hotel_id, i.night_count, i.check_in_date, i.check_out_date, i.hotel_price, i.guest_count, i.inquirer_name, i.travel_reservation_status, i.hotel_reservation_status, i.inquirer_tel, i.room_count, h.hotel_name, ti.agency_name, i.agency_id FROM inquiry_info_list i JOIN travel_info_list ti ON i.agency_id = ti.agency_id JOIN hotel_info_list h ON i.hotel_id = h.hotel_id WHERE !(i.travel_reservation_status = 3 OR i.hotel_reservation_status = 3) AND i.agency_id = ? AND i.hotel_id = ?";
+26:         PreparedStatement ps = conn.prepareStatement(sqlQuery);
+27:         ps.setInt(1, agency_id);
+28:         ps.setInt(2, Integer.parseInt(request.getParameter(hotel_id)));
+29:         ResultSet rs = ps.executeQuery();
+30: 
+31:         while (rs.next()) {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:06:20.982 심각 [ajp-nio-0.0.0.0-8009-exec-16] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [행 [16]에서 [hotel/resv_related_update.jsp]을(를) 처리하는 중 예외 발생
+
+13:     boolean canUpdate = false;
+14:     checkResult.next();
+15: 
+16:     if (checkResult.getInt(1) > 0) {
+17:         canUpdate = true;
+18:     }
+19:     // JSON 응답을 위한 PrintWriter 설정
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	java.sql.SQLDataException: Current position is after the last row
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.checkObjectRange(SelectResultSet.java:624)
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.getInt(SelectResultSet.java:980)
+		at org.apache.jsp.hotel.resv_005frelated_005fupdate_jsp._jspService(resv_005frelated_005fupdate_jsp.java:162)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:06:32.891 심각 [ajp-nio-0.0.0.0-8009-exec-18] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [행 [16]에서 [hotel/resv_related_update.jsp]을(를) 처리하는 중 예외 발생
+
+13:     boolean canUpdate = false;
+14:     checkResult.next();
+15: 
+16:     if (checkResult.getInt(1) > 0) {
+17:         canUpdate = true;
+18:     }
+19:     // JSON 응답을 위한 PrintWriter 설정
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	java.sql.SQLDataException: Current position is after the last row
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.checkObjectRange(SelectResultSet.java:624)
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.getInt(SelectResultSet.java:980)
+		at org.apache.jsp.hotel.resv_005frelated_005fupdate_jsp._jspService(resv_005frelated_005fupdate_jsp.java:162)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:15:17.288 심각 [ajp-nio-0.0.0.0-8009-exec-18] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [행 [16]에서 [hotel/resv_related_update.jsp]을(를) 처리하는 중 예외 발생
+
+13:     boolean canUpdate = false;
+14:     checkResult.next();
+15: 
+16:     if (checkResult.getInt(1) > 0) {
+17:         canUpdate = true;
+18:     }
+19:     // JSON 응답을 위한 PrintWriter 설정
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	java.sql.SQLDataException: Current position is after the last row
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.checkObjectRange(SelectResultSet.java:624)
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.getInt(SelectResultSet.java:980)
+		at org.apache.jsp.hotel.resv_005frelated_005fupdate_jsp._jspService(resv_005frelated_005fupdate_jsp.java:162)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:15:30.824 심각 [ajp-nio-0.0.0.0-8009-exec-11] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [행 [16]에서 [hotel/resv_related_update.jsp]을(를) 처리하는 중 예외 발생
+
+13:     boolean canUpdate = false;
+14:     checkResult.next();
+15: 
+16:     if (checkResult.getInt(1) > 0) {
+17:         canUpdate = true;
+18:     }
+19:     // JSON 응답을 위한 PrintWriter 설정
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	java.sql.SQLDataException: Current position is after the last row
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.checkObjectRange(SelectResultSet.java:624)
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.getInt(SelectResultSet.java:980)
+		at org.apache.jsp.hotel.resv_005frelated_005fupdate_jsp._jspService(resv_005frelated_005fupdate_jsp.java:162)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:16:30.904 심각 [ajp-nio-0.0.0.0-8009-exec-12] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [행 [16]에서 [hotel/resv_related_update.jsp]을(를) 처리하는 중 예외 발생
+
+13:     boolean canUpdate = false;
+14:     checkResult.next();
+15: 
+16:     if (checkResult.getInt(1) > 0) {
+17:         canUpdate = true;
+18:     }
+19:     // JSON 응답을 위한 PrintWriter 설정
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	java.sql.SQLDataException: Current position is after the last row
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.checkObjectRange(SelectResultSet.java:624)
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.getInt(SelectResultSet.java:980)
+		at org.apache.jsp.hotel.resv_005frelated_005fupdate_jsp._jspService(resv_005frelated_005fupdate_jsp.java:162)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:16:44.228 심각 [ajp-nio-0.0.0.0-8009-exec-17] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [행 [16]에서 [hotel/resv_related_update.jsp]을(를) 처리하는 중 예외 발생
+
+13:     boolean canUpdate = false;
+14:     checkResult.next();
+15: 
+16:     if (checkResult.getInt(1) > 0) {
+17:         canUpdate = true;
+18:     }
+19:     // JSON 응답을 위한 PrintWriter 설정
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	java.sql.SQLDataException: Current position is after the last row
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.checkObjectRange(SelectResultSet.java:624)
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.getInt(SelectResultSet.java:980)
+		at org.apache.jsp.hotel.resv_005frelated_005fupdate_jsp._jspService(resv_005frelated_005fupdate_jsp.java:162)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:17:40.812 심각 [ajp-nio-0.0.0.0-8009-exec-20] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [행 [16]에서 [hotel/resv_related_update.jsp]을(를) 처리하는 중 예외 발생
+
+13:     boolean canUpdate = false;
+14:     checkResult.next();
+15: 
+16:     if (checkResult.getInt(1) > 0) {
+17:         canUpdate = true;
+18:     }
+19:     // JSON 응답을 위한 PrintWriter 설정
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	java.sql.SQLDataException: Current position is after the last row
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.checkObjectRange(SelectResultSet.java:624)
+		at org.mariadb.jdbc.internal.com.read.resultset.SelectResultSet.getInt(SelectResultSet.java:980)
+		at org.apache.jsp.hotel.resv_005frelated_005fupdate_jsp._jspService(resv_005frelated_005fupdate_jsp.java:162)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:21:09.994 심각 [ajp-nio-0.0.0.0-8009-exec-19] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [11] 행에서 오류가 발생했습니다.
+canUpdate cannot be resolved to a variable
+8:     PrintWriter outWriter = response.getWriter();
+9: 
+10:     try {
+11:         if (canUpdate) {
+12:             // 변경 가능할 경우, 업데이트 쿼리 실행
+13:             String sqlQuery = "UPDATE inquiry_info_list SET hotel_reservation_status = ? WHERE reservation_id = ?";
+14:             PreparedStatement ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [66] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved to a variable
+63:         e.printStackTrace();
+64:     } finally {
+65:         // PreparedStatement 닫기
+66:         if (checkResult != null) {
+67:             checkResult.close();
+68:         }
+69:         if (checkPs != null) {
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [67] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved
+64:     } finally {
+65:         // PreparedStatement 닫기
+66:         if (checkResult != null) {
+67:             checkResult.close();
+68:         }
+69:         if (checkPs != null) {
+70:             checkPs.close();
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [69] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved to a variable
+66:         if (checkResult != null) {
+67:             checkResult.close();
+68:         }
+69:         if (checkPs != null) {
+70:             checkPs.close();
+71:         }
+72:     }
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [70] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved
+67:             checkResult.close();
+68:         }
+69:         if (checkPs != null) {
+70:             checkPs.close();
+71:         }
+72:     }
+73:     conn.close();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [11] 행에서 오류가 발생했습니다.
+canUpdate cannot be resolved to a variable
+8:     PrintWriter outWriter = response.getWriter();
+9: 
+10:     try {
+11:         if (canUpdate) {
+12:             // 변경 가능할 경우, 업데이트 쿼리 실행
+13:             String sqlQuery = "UPDATE inquiry_info_list SET hotel_reservation_status = ? WHERE reservation_id = ?";
+14:             PreparedStatement ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [66] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved to a variable
+63:         e.printStackTrace();
+64:     } finally {
+65:         // PreparedStatement 닫기
+66:         if (checkResult != null) {
+67:             checkResult.close();
+68:         }
+69:         if (checkPs != null) {
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [67] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved
+64:     } finally {
+65:         // PreparedStatement 닫기
+66:         if (checkResult != null) {
+67:             checkResult.close();
+68:         }
+69:         if (checkPs != null) {
+70:             checkPs.close();
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [69] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved to a variable
+66:         if (checkResult != null) {
+67:             checkResult.close();
+68:         }
+69:         if (checkPs != null) {
+70:             checkPs.close();
+71:         }
+72:     }
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [70] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved
+67:             checkResult.close();
+68:         }
+69:         if (checkPs != null) {
+70:             checkPs.close();
+71:         }
+72:     }
+73:     conn.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:23:00.166 심각 [ajp-nio-0.0.0.0-8009-exec-14] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [57] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved to a variable
+54:         e.printStackTrace();
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [58] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [60] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved to a variable
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [61] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+64:     conn.close();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [57] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved to a variable
+54:         e.printStackTrace();
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [58] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [60] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved to a variable
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [61] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+64:     conn.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:23:11.945 심각 [ajp-nio-0.0.0.0-8009-exec-16] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [57] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved to a variable
+54:         e.printStackTrace();
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [58] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [60] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved to a variable
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [61] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+64:     conn.close();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [57] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved to a variable
+54:         e.printStackTrace();
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [58] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [60] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved to a variable
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [61] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+64:     conn.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 11:23:20.925 심각 [ajp-nio-0.0.0.0-8009-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [57] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved to a variable
+54:         e.printStackTrace();
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [58] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [60] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved to a variable
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [61] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+64:     conn.close();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [57] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved to a variable
+54:         e.printStackTrace();
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [58] 행에서 오류가 발생했습니다.
+checkResult cannot be resolved
+55:     } finally {
+56:         // PreparedStatement 닫기
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [60] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved to a variable
+57:         if (checkResult != null) {
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+
+
+JSP 파일 [/hotel/resv_related_update.jsp]의 [61] 행에서 오류가 발생했습니다.
+checkPs cannot be resolved
+58:             checkResult.close();
+59:         }
+60:         if (checkPs != null) {
+61:             checkPs.close();
+62:         }
+63:     }
+64:     conn.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 14:20:32.407 심각 [ajp-nio-0.0.0.0-8009-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/statistics_in.jsp]의 [38] 행에서 오류가 발생했습니다.
+cancel cannot be resolved
+35:                     jsonResponse.put("confirmed_reservations", rs.getInt("confirmed_reservations"));
+36:                     jsonResponse.put("canceled_reservations", rs.getInt("canceled_reservations"));
+37:                     jsonResponse.put("active_reservations", rs.getInt("active_reservations"));
+38:                     cancel.put("total_price", rs.getString("total_price") != null ? rs.getString("total_price") : "0"); // getString으로 변경 및 null 체크 추가
+39: 
+40:                     jsonResponse.put("total_night_count", rs.getInt("total_night_count"));
+41:                 }
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/statistics_in.jsp]의 [38] 행에서 오류가 발생했습니다.
+cancel cannot be resolved
+35:                     jsonResponse.put("confirmed_reservations", rs.getInt("confirmed_reservations"));
+36:                     jsonResponse.put("canceled_reservations", rs.getInt("canceled_reservations"));
+37:                     jsonResponse.put("active_reservations", rs.getInt("active_reservations"));
+38:                     cancel.put("total_price", rs.getString("total_price") != null ? rs.getString("total_price") : "0"); // getString으로 변경 및 null 체크 추가
+39: 
+40:                     jsonResponse.put("total_night_count", rs.getInt("total_night_count"));
+41:                 }
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jul-2024 14:20:40.733 심각 [ajp-nio-0.0.0.0-8009-exec-11] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/statistics_in.jsp]의 [38] 행에서 오류가 발생했습니다.
+cancel cannot be resolved
+35:                     jsonResponse.put("confirmed_reservations", rs.getInt("confirmed_reservations"));
+36:                     jsonResponse.put("canceled_reservations", rs.getInt("canceled_reservations"));
+37:                     jsonResponse.put("active_reservations", rs.getInt("active_reservations"));
+38:                     cancel.put("total_price", rs.getString("total_price") != null ? rs.getString("total_price") : "0"); // getString으로 변경 및 null 체크 추가
+39: 
+40:                     jsonResponse.put("total_night_count", rs.getInt("total_night_count"));
+41:                 }
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/hotel/statistics_in.jsp]의 [38] 행에서 오류가 발생했습니다.
+cancel cannot be resolved
+35:                     jsonResponse.put("confirmed_reservations", rs.getInt("confirmed_reservations"));
+36:                     jsonResponse.put("canceled_reservations", rs.getInt("canceled_reservations"));
+37:                     jsonResponse.put("active_reservations", rs.getInt("active_reservations"));
+38:                     cancel.put("total_price", rs.getString("total_price") != null ? rs.getString("total_price") : "0"); // getString으로 변경 및 null 체크 추가
+39: 
+40:                     jsonResponse.put("total_night_count", rs.getInt("total_night_count"));
+41:                 }
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)

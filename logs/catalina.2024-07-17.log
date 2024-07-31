@@ -1,0 +1,7 @@
+17-Jul-2024 13:16:55.159 정보 [Thread-1] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+17-Jul-2024 13:16:55.163 정보 [Thread-1] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["ajp-nio-0.0.0.0-8009"]을(를) 일시 정지 중
+17-Jul-2024 13:16:55.165 정보 [Thread-1] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+17-Jul-2024 13:16:55.278 정보 [Thread-1] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+17-Jul-2024 13:16:55.285 정보 [Thread-1] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["ajp-nio-0.0.0.0-8009"]을(를) 중지시킵니다.
+17-Jul-2024 13:16:55.308 정보 [Thread-1] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+17-Jul-2024 13:16:55.309 정보 [Thread-1] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["ajp-nio-0.0.0.0-8009"]을(를) 소멸시킵니다.

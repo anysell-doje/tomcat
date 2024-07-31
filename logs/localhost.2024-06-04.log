@@ -1,0 +1,1882 @@
+04-Jun-2024 09:26:02.030 심각 [ajp-nio-0.0.0.0-8009-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/hotel_member_manager.jsp]의 [36] 행에서 오류가 발생했습니다.
+Syntax error on token "Invalid Character", delete this token
+33:                 hasData = true;
+34:             }
+35: 
+36:             if(hasData) {\
+37:                 jsonResponse.put("hotel_member_data", hotelMemberArray);
+38:                 jsonResponse.put("success", true);
+39:             } else {
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/hotel_member_manager.jsp]의 [36] 행에서 오류가 발생했습니다.
+Syntax error on token "Invalid Character", delete this token
+33:                 hasData = true;
+34:             }
+35: 
+36:             if(hasData) {\
+37:                 jsonResponse.put("hotel_member_data", hotelMemberArray);
+38:                 jsonResponse.put("success", true);
+39:             } else {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 10:07:10.377 정보 [Catalina-utility-1] org.apache.catalina.core.ApplicationContext.log 서블릿 [javax.websocket.server.ServerContainer]을(를) 가용하지 않은 상태로 표시합니다.
+04-Jun-2024 10:07:10.378 심각 [Catalina-utility-1] org.apache.catalina.core.StandardContext.loadOnStartup 웹 애플리케이션 [] 내의 서블릿 [javax.websocket.server.ServerContainer]이(가) load() 예외를 발생시켰습니다.
+	java.lang.ClassCastException: class org.apache.tomcat.websocket.server.WsSci cannot be cast to class javax.servlet.Servlet (org.apache.tomcat.websocket.server.WsSci and javax.servlet.Servlet are in unnamed module of loader java.net.URLClassLoader @3d646c37)
+		at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1020)
+		at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:960)
+		at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4641)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4948)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3581)
+		at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1415)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1390)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1620)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1098)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1301)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1283)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:57:23.514 심각 [ajp-nio-0.0.0.0-8009-exec-30] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:57:24.070 심각 [ajp-nio-0.0.0.0-8009-exec-26] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.admin.travel_005fmember_005finfo_005fupdate_jsp]을(를) 발생시켰습니다.
+	java.lang.ClassNotFoundException: org.apache.jsp.admin.travel_005fmember_005finfo_005fupdate_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:476)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:192)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:413)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:57:43.634 심각 [ajp-nio-0.0.0.0-8009-exec-29] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:57:47.600 심각 [ajp-nio-0.0.0.0-8009-exec-31] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.admin.travel_005fmember_005finfo_005fupdate_jsp]을(를) 발생시켰습니다.
+	java.lang.ClassNotFoundException: org.apache.jsp.admin.travel_005fmember_005finfo_005fupdate_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:476)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:192)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:413)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:59:06.036 심각 [ajp-nio-0.0.0.0-8009-exec-34] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:59:10.361 심각 [ajp-nio-0.0.0.0-8009-exec-35] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:59:27.317 심각 [ajp-nio-0.0.0.0-8009-exec-32] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:59:31.866 심각 [ajp-nio-0.0.0.0-8009-exec-33] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:59:31.978 심각 [ajp-nio-0.0.0.0-8009-exec-30] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.admin.travel_005fmember_005finfo_005fupdate_jsp]을(를) 발생시켰습니다.
+	java.lang.ClassNotFoundException: org.apache.jsp.admin.travel_005fmember_005finfo_005fupdate_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:476)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:192)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:413)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 13:59:36.359 심각 [ajp-nio-0.0.0.0-8009-exec-26] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 14:00:04.513 심각 [ajp-nio-0.0.0.0-8009-exec-27] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 14:00:46.517 심각 [ajp-nio-0.0.0.0-8009-exec-28] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 14:00:56.104 심각 [ajp-nio-0.0.0.0-8009-exec-29] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [38] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved
+35:         }
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [39] 행에서 오류가 발생했습니다.
+travel_id_param cannot be resolved to a variable
+36: 
+37:         // 예약 정보 변경
+38:         if (travel_id_param != null && !travel_id_param.isEmpty()) {
+39:             int travel_id = Integer.parseInt(travel_id_param);
+40:             String sqlQuery = "UPDATE travel_member_list SET travel_email = ?, travel_pw = ?, travel_name = ?, travel_tel = ? WHERE travel_email = ?";
+41:             ps = conn.prepareStatement(sqlQuery);
+42: 
+
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [48] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+45:             ps.setString(2, hashedPassword);
+46:             ps.setString(3, travel_name);
+47:             ps.setString(4, travel_tel);
+48:             ps.setInt(5, travel_email);
+49: 
+50:             int updateCount = ps.executeUpdate();
+51: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 14:01:44.855 심각 [ajp-nio-0.0.0.0-8009-exec-31] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [46] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+43:             ps.setString(2, hashedPassword);
+44:             ps.setString(3, travel_name);
+45:             ps.setString(4, travel_tel);
+46:             ps.setInt(5, travel_email);
+47: 
+48:             int updateCount = ps.executeUpdate();
+49: 
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_update.jsp]의 [46] 행에서 오류가 발생했습니다.
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+43:             ps.setString(2, hashedPassword);
+44:             ps.setString(3, travel_name);
+45:             ps.setString(4, travel_tel);
+46:             ps.setInt(5, travel_email);
+47: 
+48:             int updateCount = ps.executeUpdate();
+49: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 15:34:13.413 심각 [ajp-nio-0.0.0.0-8009-exec-33] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 15:34:20.410 심각 [ajp-nio-0.0.0.0-8009-exec-27] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 15:34:42.195 심각 [ajp-nio-0.0.0.0-8009-exec-31] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 15:35:17.993 심각 [ajp-nio-0.0.0.0-8009-exec-32] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 15:35:30.758 심각 [ajp-nio-0.0.0.0-8009-exec-33] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+04-Jun-2024 15:35:53.152 심각 [ajp-nio-0.0.0.0-8009-exec-30] org.apache.catalina.core.StandardWrapperValve.invoke 경로 []의 컨텍스트 내의 서블릿 [jsp]을(를) 위한 Servlet.service() 호출이, 근본 원인(root cause)과 함께, 예외 [JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:]을(를) 발생시켰습니다.
+	org.apache.jasper.JasperException: JSP를 위한 클래스를 컴파일할 수 없습니다.: 
+
+JSP 파일 [/admin/travel_member_info_delete.jsp]의 [20] 행에서 오류가 발생했습니다.
+The method setString(int, String) in the type PreparedStatement is not applicable for the arguments (int, int)
+17:             int travel_email = Integer.parseInt(travel_email_param);
+18:             String sqlQuery = "delete from travel_member_list where travel_email = ?";
+19:             ps = conn.prepareStatement(sqlQuery);
+20:             ps.setString(1, travel_email);
+21:             
+22: 
+23:             int updateCount = ps.executeUpdate();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:542)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:210)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:179)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:154)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.ajp.AjpProcessor.service(AjpProcessor.java:424)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1786)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
