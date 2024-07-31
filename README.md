@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Welcome to Apache Tomcat!
 
 ### What Is It?
@@ -78,3 +79,6 @@ instructions for reporting a bug
 ### Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for more info.
+=======
+# tomcat
+>>>>>>> 6ee091c21743284feb5811c4d2f27ff30dd970aa
